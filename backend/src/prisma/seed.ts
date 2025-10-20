@@ -70,7 +70,7 @@ async function main() {
       slug: "iphone-15-pro",
       description:
         "The latest iPhone with advanced camera system and A17 Pro chip",
-      priceCents: 99900, // $999
+      priceCents: 99900, // $999  
       images: {
         primary: "https://picsum.photos/400/400?random=1",
         gallery: [
