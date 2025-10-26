@@ -38,6 +38,5 @@ app.use(errorHandler);
 assertEnv();
 const port = env.port;
 app.listen(port, () => {
-  // eslint-disable-next-line no-console
   console.log(`VDM backend listening on http://localhost:${port}`);
 });

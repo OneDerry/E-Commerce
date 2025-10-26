@@ -37,10 +37,10 @@ export function formatDateTime(date: string | Date): string {
   }).format(new Date(date));
 }
 
-// Generate unique ID
-export function generateId(): string {
-  return Math.random().toString(36).substr(2, 9);
-}
+// // Generate unique ID
+// export function generateId(): string {
+//   return Math.random().toString(36).substr(2, 9);
+// }
 
 // Calculate cart total
 export function calculateCartTotal(items: { price: number; quantity: number }[]): number {

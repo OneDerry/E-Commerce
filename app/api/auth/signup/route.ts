@@ -69,11 +69,11 @@ export async function POST(request: NextRequest) {
     );
 
     // Return user data (without password) and token
-    const { password: _, ...userWithoutPassword } = newUser;
+    // const { password: _, ...userWithoutPassword } = newUser;
 
     return NextResponse.json({
       success: true,
-      user: userWithoutPassword,
+      user: '',
       token,
     });
   } catch (error) {

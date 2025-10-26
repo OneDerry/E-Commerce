@@ -1,8 +1,8 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
 import Link from "next/link";
-import { ArrowRight, Star } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import { Product } from "@/types";
 import ProductCard from "./ProductCard";
 import { Button } from "@/components/ui/button";
@@ -35,6 +35,18 @@ const BestSellersSection: React.FC<BestSellersSectionProps> = ({
       return b.reviews.length - a.reviews.length;
     })
     .slice(0, maxProducts);
+
+  const scrollRef = useRef<HTMLDivElement>(null);
+
+  const scroll = (direction: "left" | "right") => {
+    if (scrollRef.current) {
+      const scrollAmount = 300; // adjust scroll distance
+      scrollRef.current.scrollBy({
+        left: direction === "left" ? -scrollAmount : scrollAmount,
+        behavior: "smooth",
+      });
+    }
+  };
 
   if (isLoading) {
     return (
@@ -133,16 +145,44 @@ const BestSellersSection: React.FC<BestSellersSectionProps> = ({
         </div>
 
         {/* Products Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {bestSellers.map((product) => (
-            <div
-              key={product.id}
-              className="transform hover:scale-105 transition-transform duration-300"
-            >
-              <ProductCard product={product} />
-            </div>
-          ))}
-        </div>
+
+        <section className="relative w-full">
+          {/* Left Arrow */}
+          <Button
+            onClick={() => scroll("left")}
+            className="absolute left-2 top-1/2 -translate-y-1/2 z-10 rounded-full shadow bg-white hover:bg-gray-100"
+            size="icon"
+          >
+            <ChevronLeft fill="black" />
+          </Button>
+
+          {/* Scrollable container (mobile/tablet) or grid (desktop) */}
+          <div
+            ref={scrollRef}
+            className="flex overflow-x-auto scroll-smooth scrollbar-hide gap-6 px-4 py-4 lg:grid lg:grid-cols-4 lg:gap-6 lg:overflow-x-auto"
+          >
+            {bestSellers.map((product) => (
+              <div
+                key={product.id}
+                className="
+          flex-shrink-0 w-[260px] sm:w-[280px] md:w-[300px] 
+          lg:w-auto transform hover:scale-105 transition-transform duration-300
+        "
+              >
+                <ProductCard product={product} />
+              </div>
+            ))}
+          </div>
+
+          {/* Right Arrow */}
+          <Button
+            onClick={() => scroll("right")}
+            className="absolute right-2 top-1/2 -translate-y-1/2 z-10 rounded-full shadow bg-white hover:bg-gray-100"
+            size="icon"
+          >
+            <ChevronRight fill="black" />
+          </Button>
+        </section>
 
         {/* Bottom Stats */}
         <div className="mt-8 pt-6 border-t border-border">

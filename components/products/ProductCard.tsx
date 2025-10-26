@@ -39,8 +39,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
 
   return (
     <Link href={`/products/${product.id}`}>
-      <Card className="group hover:shadow-xl transition-all duration-300 cursor-pointer bg-gradient-to-br from-card to-muted/5 border-0 rounded-2xl overflow-hidden">
-        <div className="relative aspect-square overflow-hidden">
+      <Card className="group hover:shadow-xl h-110 transition-all duration-300 cursor-pointer bg-gradient-to-br from-card to-muted/5 border-0 rounded-2xl overflow-hidden">
+        <div className="relative h-60 overflow-hidden">
           <Image
             src={product.image}
             alt={product.name}
@@ -81,7 +81,7 @@ const ProductCard: React.FC<ProductCardProps> = ({ product }) => {
               </span>
             </div>
 
-            <p className="text-sm text-foreground/70 line-clamp-2 leading-relaxed">
+            <p className="text-sm truncate w-full text-foreground/70 line-clamp-2 leading-relaxed">
               {product.description}
             </p>
 

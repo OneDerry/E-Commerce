@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import React, { useEffect } from "react";
 import { useProducts, useAuth, useEventTracking } from "@/lib/hooks";
 import ProductCard from "@/components/products/ProductCard";
@@ -40,9 +41,9 @@ export const ProductListExample: React.FC = () => {
     trackEvent("filter", "products", { category });
   };
 
-  const handleProductClick = (productId: string) => {
-    trackEvent("product_click", "products", { productId });
-  };
+  // const handleProductClick = (productId: string) => {
+  //   trackEvent("product_click", "products", { productId });
+  // };
 
   if (isLoading) {
     return (
