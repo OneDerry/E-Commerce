@@ -19,10 +19,10 @@ const Footer: React.FC = () => {
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-accent rounded-lg flex items-center justify-center">
                 <span className="text-accent-foreground font-bold text-lg">
-                  V
+                  A
                 </span>
               </div>
-              <span className="text-xl font-bold">VDM Store</span>
+              <span className="text-xl font-bold">Aisle 3</span>
             </div>
             <p className="text-primary-foreground/70 text-sm">
               Your one-stop shop for the latest gadgets and electronics. Quality

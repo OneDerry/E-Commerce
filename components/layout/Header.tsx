@@ -52,7 +52,7 @@ const Header: React.FC = () => {
               </span>
             </div>
             <span className="text-2xl font-bold text-primary-foreground">
-              VDM Store.
+              Aisle 3
             </span>
           </Link>
 
@@ -75,7 +75,7 @@ const Header: React.FC = () => {
               <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 text-primary-foreground/60 h-5 w-5" />
               <Input
                 type="text"
-                placeholder="Search VDM Store"
+                placeholder="Search Aisle 3"
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
                 className="pl-12 pr-4 py-3 w-full rounded-full border-primary-foreground/20 bg-primary-foreground/5 text-primary-foreground placeholder-primary-foreground/60 focus:border-accent focus:ring-2 focus:ring-accent/20"

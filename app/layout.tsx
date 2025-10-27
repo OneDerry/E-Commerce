@@ -16,9 +16,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "VDM Gadget Store - Your One-Stop Tech Shop",
+  title: "Aisle 3 Gadget Store - Your One-Stop Tech Shop",
   description:
-    "Discover the latest gadgets and electronics at VDM Store. Quality products at affordable prices with fast delivery.",
+    "Discover the latest gadgets and electronics at Aisle 3. Quality products at affordable prices with fast delivery.",
 };
 
 export default function RootLayout({
