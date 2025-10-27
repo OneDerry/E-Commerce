@@ -76,6 +76,7 @@ export default function SignupPage() {
                         <Input
                           type="text"
                           placeholder="Enter your full name"
+                          className="border border-primary"
                           {...field}
                         />
                       </FormControl>
@@ -94,6 +95,7 @@ export default function SignupPage() {
                         <Input
                           type="email"
                           placeholder="Enter your email"
+                          className="border border-primary"
                           {...field}
                         />
                       </FormControl>
@@ -112,6 +114,7 @@ export default function SignupPage() {
                         <Input
                           type="tel"
                           placeholder="Enter your phone number"
+                          className="border border-primary"
                           {...field}
                         />
                       </FormControl>
@@ -131,6 +134,7 @@ export default function SignupPage() {
                           <Input
                             type={showPassword ? "text" : "password"}
                             placeholder="Create a password"
+                            className="border border-primary"
                             {...field}
                           />
                           <button
@@ -162,6 +166,7 @@ export default function SignupPage() {
                           <Input
                             type={showConfirmPassword ? "text" : "password"}
                             placeholder="Confirm your password"
+                            className="border border-primary"
                             {...field}
                           />
                           <button

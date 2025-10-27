@@ -72,6 +72,7 @@ export default function LoginPage() {
                         <Input
                           type="email"
                           placeholder="Enter your email"
+                          className="border border-primary"
                           {...field}
                         />
                       </FormControl>
@@ -91,6 +92,7 @@ export default function LoginPage() {
                           <Input
                             type={showPassword ? "text" : "password"}
                             placeholder="Enter your password"
+                            className="border border-primary"
                             {...field}
                           />
                           <button
